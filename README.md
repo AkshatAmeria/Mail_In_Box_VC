@@ -3,6 +3,7 @@
 > A production-grade email scheduling service built with **Express.js**, **BullMQ**, **Redis**, **PostgreSQL**, and a **Next.js** dashboard. Designed to reliably schedule and send emails at scale — surviving server restarts, enforcing rate limits, and preventing duplicate sends.
 
 🔗 **Live Backend:** [https://software-development-intern-assignment.onrender.com](https://software-development-intern-assignment.onrender.com)
+WATCH DEMO OF THE PROJECT : (https://drive.google.com/file/d/1NDqhKqIoGj2J2h_KVStpOUxmFkNDuTaB/view)
 
 ---
 
