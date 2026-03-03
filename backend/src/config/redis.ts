@@ -1,7 +1,10 @@
 import { Redis } from "ioredis";
 import { config } from "../config/env.js";
 
-export const redis = new Redis("redis://127.0.0.1:6380");
+//@ts-expect-error
+export const redis = new Redis(config.redisUrl);
+
+// export const redis = new Redis("redis://127.0.0.1:6380");
 
 
 redis.on("connect", () => {
