@@ -24,7 +24,16 @@
 - [Assumptions & Trade-offs](#assumptions--trade-offs)
 
 ---
-
+## Images of Live Local Running 
+<img width="1411" height="200" alt="image" src="https://github.com/user-attachments/assets/ea2d5d40-4618-4240-8da6-fbb9c2342019" />
+<img width="1220" height="200" alt="image" src="https://github.com/user-attachments/assets/82510cb6-0104-411d-875b-2d75523d7cba" />
+<img width="669" height="346" alt="image" src="https://github.com/user-attachments/assets/331ed731-073b-47bf-9ab6-c7494be8bcca" />
+<img width="1896" height="888" alt="image" src="https://github.com/user-attachments/assets/f2170a2a-61c6-4d13-bcc7-2b62084819c8" />
+<img width="1899" height="867" alt="image" src="https://github.com/user-attachments/assets/476ef4f6-3759-4f4f-91cb-9ad9627dd212" />
+<img width="1425" height="831" alt="image" src="https://github.com/user-attachments/assets/fd43c43c-2863-473d-a364-6b15824a4458" />
+<img width="1869" height="876" alt="image" src="https://github.com/user-attachments/assets/2e14bac3-6e65-4b95-90dd-9df889c44928" />
+<img width="1399" height="794" alt="image" src="https://github.com/user-attachments/assets/188b8367-8ae8-4d7d-897b-04ed2701ebd5" />
+<img width="937" height="559" alt="image" src="https://github.com/user-attachments/assets/30c41d1e-afad-4209-a3d6-133d1047b777" />
 ## Architecture Overview
 
 ```
