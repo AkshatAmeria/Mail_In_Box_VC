@@ -3,6 +3,7 @@ import { config } from "../../config/env.js";
 import { prisma } from "../../db/prisma.js";
 import { allowSend, msUntilNextHour } from "./rateLimiter.js";
 import { createTransport } from "../email/smtp.js";
+import { emailQueue } from "./email.queue.js";
 
 export const worker = new Worker(
   "emailQueue",
@@ -33,11 +34,18 @@ export const worker = new Worker(
 
     if (!allowed) {
 
-      console.log("Rate limit reached. Rescheduling job:", job.id);
+      console.log("Rate limit reached. Re-queueing job:", job.id);
 
       const delay = msUntilNextHour();
 
-      await job.moveToDelayed(Date.now() + delay);
+      await emailQueue.add(
+        "sendEmail",
+        { emailId: email.id },
+        {
+          delay,
+          jobId: `${email.id}-${Date.now()}`
+        }
+      );
 
       await prisma.email.update({
         where: { id: email.id },
@@ -53,9 +61,7 @@ export const worker = new Worker(
       where: { id: email.senderId },
     });
 
-    if (!sender) {
-      throw new Error("Sender not found");
-    }
+    if (!sender) throw new Error("Sender not found");
 
     const transporter = createTransport(sender);
 
@@ -95,7 +101,7 @@ export const worker = new Worker(
 
   },
   {
-    //@ts-expect-error
+    //@ts-ignore
     connection: {
       url: config.redisUrl,
     },
